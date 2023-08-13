@@ -15,7 +15,9 @@ createBtn.addEventListener('click', () => {
   createBoxes(amount);
 });
 
+
 function createBoxes(amount) { 
+  boxElements.innerHTML = '';
   let boxItems = "";
   let dimension = 30;
   for (let i = 1; i <= amount; i += 1) { 
