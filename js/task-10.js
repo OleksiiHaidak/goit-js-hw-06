@@ -13,14 +13,13 @@ const destroyBtn = document.querySelector('#controls button[data-destroy]');
 createBtn.addEventListener('click', () => {
   const amount = Number(inputMenu.value);
   createBoxes(amount);
+      if (amount < Number(inputMenu.min) || amount > Number(inputMenu.max)) { 
+    return alert("Введено недопустиме значення");
+  };
 });
 
 
 function createBoxes(amount) { 
-  if (amount < Number(inputMenu.min) || amount > Number(inputMenu.max)) { 
-    return alert("Введено недопустиме значення");
-  };
-  
   let boxItems = "";
   let dimension = 30;
   const increment = Number(inputMenu.step);
