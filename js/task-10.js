@@ -17,10 +17,14 @@ createBtn.addEventListener('click', () => {
 
 
 function createBoxes(amount) { 
-  boxElements.innerHTML = '';
+  if (amount < Number(inputMenu.min) || amount > Number(inputMenu.max)) { 
+    return alert("Введено недопустиме значення");
+  };
+  
   let boxItems = "";
   let dimension = 30;
-  for (let i = 1; i <= amount; i += 1) { 
+  const increment = Number(inputMenu.step);
+  for (let i = 1; i <= amount; i += increment) { 
     boxItems += `<div style="background-color: ${getRandomHexColor()}; width: ${dimension}px; height:${dimension}px; margin-top: 10px;"></div>`;
     dimension += 10;
   }
@@ -34,3 +38,4 @@ function destroyBoxes() {
   boxElements.innerHTML = '';
   inputMenu.value = '';
 };
+

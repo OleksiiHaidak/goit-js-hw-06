@@ -10,13 +10,9 @@ const changeColorBtn = document.querySelector('.change-color');
 const bodyBgColor = document.querySelector('body');
 const colorName = document.querySelector('.color');
 
-changeColorBtn.addEventListener('click', () => { 
-  bodyBgColor.style.backgroundColor = getRandomHexColor();
-  colorName.textContent = bodyBgColor.style.backgroundColor;
-});
 
-// changeColorBtn.addEventListener('click', () => { 
-//   const randomColor = getRandomHexColor();
-//   bodyBgColor.style.backgroundColor = randomColor;
-//   colorName.textContent = randomColor;
-// });
+changeColorBtn.addEventListener('click', () => { 
+  const randomColor = getRandomHexColor();
+  bodyBgColor.style.backgroundColor = randomColor;
+  colorName.textContent = randomColor;
+});

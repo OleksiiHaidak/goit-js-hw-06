@@ -8,3 +8,5 @@ const controlSlider = () => {
 };
 
 fontSizeControlSlider.addEventListener("input", controlSlider);
+
+controlSlider();

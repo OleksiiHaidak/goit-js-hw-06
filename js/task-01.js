@@ -9,8 +9,8 @@ console.log(`Number of categories: ${elementsNumber.length}`);
 
 const categoryCards = document.querySelectorAll(".item");
 categoryCards.forEach(element => {
-    const titleText = element.querySelector("h2");
-    const liEl = element.querySelector(".item ul");
+    const titleText = element.firstElementChild;
+    const liEl = element.lastElementChild;
     console.log(`Category: ${titleText.textContent} 
 Elements: ${liEl.children.length}`);
 });
